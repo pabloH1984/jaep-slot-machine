@@ -117,6 +117,10 @@ function finalizeSpin() {
     highlightWinningSymbols(winningIds);
     spawnMusicNotes(winningIds);
     new Audio('assets/sfx/ya-se-hizo.mp3').play();
+
+    // ✅ Play happy scream sound when winning
+    const winScream = new Audio('assets/sfx/mexican-scream.mp3');
+    winScream.play();
   }
 
   credits += winnings;
