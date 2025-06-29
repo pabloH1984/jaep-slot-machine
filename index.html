@@ -2,73 +2,73 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jae‑P Slot Machine</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <div class="slot-machine">
-      
-      <>
-      </div>
-
-      <!-- Credits Info -->
-      <div class="info-box">
-        <div class="label">Credits:</div>
-        <div class="value" id="credits">$100</div>
-      </div>
-
-      <!-- Winnings & Bet -->
-      <div class="info-display top-position">
-        <div class="info-box">
-          <div class="label">Winnings:</div>
-          <div class="value" id="winnings">$0</div>
-        </div>
-        <div class="info-box">
-          <div class="label">Bet:</div>
-          <div class="value" id="bet">$1</div>
-        </div>
-      </div>
-
-      <!-- Reels -->
-      <div class="reels">
-        <div class="reel" id="reel1">
-          <div class="symbol" id="r1s1"></div>
-          <div class="symbol" id="r1s2"></div>
-          <div class="symbol" id="r1s3"></div>
-        </div>
-        <div class="reel" id="reel2">
-          <div class="symbol" id="r2s1"></div>
-          <div class="symbol" id="r2s2"></div>
-          <div class="symbol" id="r2s3"></div>
-        </div>
-        <div class="reel" id="reel3">
-          <div class="symbol" id="r3s1"></div>
-          <div class="symbol" id="r3s2"></div>
-          <div class="symbol" id="r3s3"></div>
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <div class="controls">
-        <div class="bet-controls">
-          <button class="bet-button" onclick="decreaseBet()">BET−</button>
-        </div>
-        <button id="spin-btn" onclick="spin()">SPIN</button>
-        <div class="bet-controls">
-          <button class="bet-button" onclick="increaseBet()">BET+</button>
-        </div>
-      </div>
-
-      <div id="win-effect-container"></div>
-
-      <!-- Background Music -->
-      <audio id="bg-music" loop autoplay>
-        <source src="assets/music/sample.mp3" type="audio/mpeg" />
-      </audio>
+  <div class="slot-machine">
+    <!-- Banner --> 
+    <div class="top-banner">
+      <img src="assets/img/your-banner.png" alt="Jae‑P Slot Banner">
     </div>
+
+    <!-- Winnings & Bet -->
+    <div class="info-box">
+      <div class="label">Credits:</div>
+      <div class="value" id="credits">$100</div>
+    </div>
+
+    <div class="info-display top-position">
+      <div class="info-box">
+        <div class="label">Winnings:</div>
+        <div class="value" id="winnings">$0</div>
+      </div>
+      <div class="info-box">
+        <div class="label">Bet:</div>
+        <div class="value" id="bet">$1</div>
+      </div>
+    </div>
+
+    <!-- Reels -->
+    <div class="reels">
+      <div class="reel" id="reel1">
+        <div class="symbol" id="r1s1"></div>
+        <div class="symbol" id="r1s2"></div>
+        <div class="symbol" id="r1s3"></div>
+      </div>
+      <div class="reel" id="reel2">
+        <div class="symbol" id="r2s1"></div>
+        <div class="symbol" id="r2s2"></div>
+        <div class="symbol" id="r2s3"></div>
+      </div>
+      <div class="reel" id="reel3">
+        <div class="symbol" id="r3s1"></div>
+        <div class="symbol" id="r3s2"></div>
+        <div class="symbol" id="r3s3"></div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="bet-controls">
+        <button class="bet-button" onclick="decreaseBet()">BET−</button>
+      </div>
+      <button id="spin-btn" onclick="spin()">SPIN</button>
+      <div class="bet-controls">
+        <button class="bet-button" onclick="increaseBet()">BET+</button>
+      </div>
+    </div>
+
+    <div id="win-effect-container"></div>
+
+    <!-- Background music -->
+    <audio id="bg-music" loop autoplay>
+      <source src="assets/music/sample.mp3" type="audio/mpeg" />
+    </audio>
+
+    <!-- ✅ Win sound effect -->
+    <audio id="winSound" src="assets/sfx/mexican-scream.mp3" preload="auto"></audio>
   </div>
 
   <script src="script.js"></script>
