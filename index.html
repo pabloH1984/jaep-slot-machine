@@ -5,38 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jae‑P Al Estilo Mexicano Jackpot</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
     <div class="slot-machine">
-      <div class="neon-title">
-        <span class="neon-blue">Jae‑P</span>
-        <span class="neon-gold">Al Estilo Mexicano Jackpot</span>
-      </div>
+      <h1 class="title">
+        <span class="neon-blue">Jae‑P</span> <span class="neon-gold">Al Estilo Mexicano Jackpot</span>
+      </h1>
 
-      <div class="top-banner">
-        <img src="assets/img/your-banner.png" alt="Jae‑P Slot Banner">
-      </div>
-
-      <div class="info-display top-position">
-        <div class="info-box"><div class="label">Credits:</div><div class="value" id="credits">$100</div></div>
-        <div class="info-box"><div class="label">Winnings:</div><div class="value" id="winnings">$0</div></div>
-        <div class="info-box"><div class="label">Bet:</div><div class="value" id="bet">$1</div></div>
-      </div>
-
+      <!-- Reels -->
       <div class="reels">
         <div class="reel" id="reel1">
-          <div class="symbol" id="r1s1"></div><div class="symbol" id="r1s2"></div><div class="symbol" id="r1s3"></div>
+          <div class="symbol" id="r1s1"></div>
+          <div class="symbol" id="r1s2"></div>
+          <div class="symbol" id="r1s3"></div>
         </div>
         <div class="reel" id="reel2">
-          <div class="symbol" id="r2s1"></div><div class="symbol" id="r2s2"></div><div class="symbol" id="r2s3"></div>
+          <div class="symbol" id="r2s1"></div>
+          <div class="symbol" id="r2s2"></div>
+          <div class="symbol" id="r2s3"></div>
         </div>
         <div class="reel" id="reel3">
-          <div class="symbol" id="r3s1"></div><div class="symbol" id="r3s2"></div><div class="symbol" id="r3s3"></div>
+          <div class="symbol" id="r3s1"></div>
+          <div class="symbol" id="r3s2"></div>
+          <div class="symbol" id="r3s3"></div>
         </div>
       </div>
 
+      <!-- Credits Info -->
+      <div class="info-display top-position">
+        <div class="info-box">
+          <div class="label">Credits:</div>
+          <div class="value" id="credits">$100</div>
+        </div>
+        <div class="info-box">
+          <div class="label">Winnings:</div>
+          <div class="value" id="winnings">$0</div>
+        </div>
+        <div class="info-box">
+          <div class="label">Bet:</div>
+          <div class="value" id="bet">$1</div>
+        </div>
+      </div>
+
+      <!-- Controls -->
       <div class="controls">
         <button class="bet-button" onclick="decreaseBet()">BET−</button>
         <button id="spin-btn" onclick="spin()">SPIN</button>
@@ -45,14 +58,13 @@
 
       <div id="win-effect-container"></div>
 
+      <!-- Music -->
       <audio id="bg-music" loop autoplay>
-        <source src="assets/music/Jae-P_Music_Love.mp3" type="audio/mpeg">
-      </audio>
-      <audio id="jackpot-music" preload="auto">
-        <source src="assets/music/Al_Estilo_Mexicano.mp3" type="audio/mpeg">
+        <source src="assets/music/love-in-the-background.mp3" type="audio/mpeg" />
       </audio>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
