@@ -2,20 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jae‑P Slot Machine</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <div class="slot-machine">
-      <!-- Banner -->
-      <div class="top-banner">
-        <img src="assets/img/your-banner.png" alt="Jae‑P Slot Banner">
-      </div>
+  <div class="slot-machine"> <!-- ✅ Match CSS class -->
 
-      <!-- Credits Info -->
+    <!-- 🎯 Game content overlay -->
+    <div class="slot-overlay">
+      
+      <!-- Credits -->
       <div class="info-box">
         <div class="label">Credits:</div>
         <div class="value" id="credits">$100</div>
@@ -63,15 +60,19 @@
         </div>
       </div>
 
+      <!-- Effects -->
       <div id="win-effect-container"></div>
 
-      <!-- Music -->
+      <!-- Background music -->
       <audio id="bg-music" loop autoplay>
         <source src="assets/music/sample.mp3" type="audio/mpeg" />
       </audio>
+
+      <!-- Win sound -->
       <audio id="winSound" src="assets/sfx/mexican-scream.mp3" preload="auto"></audio>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
