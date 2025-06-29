@@ -3,16 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jae‑P Al Estilo Mexicano Jackpot</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <title>Jae‑P Slot Machine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
     <div class="slot-machine">
-      <h1 class="title">
-        <span class="neon-blue">Jae‑P</span> <span class="neon-gold">Al Estilo Mexicano Jackpot</span>
-      </h1>
+      
+      <!-- Banner -->
+      <div class="top-banner">
+        <img src="assets/img/your-banner.png" alt="Jae‑P Slot Banner">
+      </div>
+
+      <!-- Credits Info -->
+      <div class="info-box">
+        <div class="label">Credits:</div>
+        <div class="value" id="credits">$100</div>
+      </div>
+
+      <!-- Winnings & Bet -->
+      <div class="info-display top-position">
+        <div class="info-box">
+          <div class="label">Winnings:</div>
+          <div class="value" id="winnings">$0</div>
+        </div>
+        <div class="info-box">
+          <div class="label">Bet:</div>
+          <div class="value" id="bet">$1</div>
+        </div>
+      </div>
 
       <!-- Reels -->
       <div class="reels">
@@ -33,34 +53,22 @@
         </div>
       </div>
 
-      <!-- Credits Info -->
-      <div class="info-display top-position">
-        <div class="info-box">
-          <div class="label">Credits:</div>
-          <div class="value" id="credits">$100</div>
-        </div>
-        <div class="info-box">
-          <div class="label">Winnings:</div>
-          <div class="value" id="winnings">$0</div>
-        </div>
-        <div class="info-box">
-          <div class="label">Bet:</div>
-          <div class="value" id="bet">$1</div>
-        </div>
-      </div>
-
       <!-- Controls -->
       <div class="controls">
-        <button class="bet-button" onclick="decreaseBet()">BET−</button>
+        <div class="bet-controls">
+          <button class="bet-button" onclick="decreaseBet()">BET−</button>
+        </div>
         <button id="spin-btn" onclick="spin()">SPIN</button>
-        <button class="bet-button" onclick="increaseBet()">BET+</button>
+        <div class="bet-controls">
+          <button class="bet-button" onclick="increaseBet()">BET+</button>
+        </div>
       </div>
 
       <div id="win-effect-container"></div>
 
-      <!-- Music -->
+      <!-- Background Music -->
       <audio id="bg-music" loop autoplay>
-        <source src="assets/music/love-in-the-background.mp3" type="audio/mpeg" />
+        <source src="assets/music/sample.mp3" type="audio/mpeg" />
       </audio>
     </div>
   </div>
