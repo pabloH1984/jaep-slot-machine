@@ -418,3 +418,24 @@ body {
     gap: 10px;
   }
 }
+@media (max-width: 600px) {
+  .controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .bet-controls {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bet-button {
+    flex: 1;
+    margin: 0 5px;
+  }
+
+  #spin-btn {
+    margin: 10px 0;
+  }
+}
