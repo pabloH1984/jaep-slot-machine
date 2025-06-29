@@ -5,30 +5,44 @@ body {
   font-family: 'Arial Black', sans-serif;
   color: white;
   text-align: center;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .slot-machine {
   width: 100vw;
-  max-width: 483px;
-  margin: 60px auto 0 auto; /* Added top margin to push everything down */
+  max-width: 100%;
+  margin: 60px auto 0 auto;
   background-color: #022953;
   border: 5px solid #00bfff;
   border-radius: 10px;
   box-shadow: 0 0 30px #00bfff, 0 0 60px #00ffff;
-  padding: 40px 20px 30px 20px; /* More top padding to create breathing space */
+  padding: 40px 20px 30px 20px;
   position: relative;
   z-index: 1;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* ✅ Make the background image appear larger */
+/* Background frame image */
 .slot-machine::before {
   content: "";
   position: absolute;
-  top: -40px; /* pull it up so it's more visible */
+  top: -40px;
   left: -20px;
-  width: calc(100% + 40px); /* make it wider */
-  height: calc(100% + 80px); /* make it taller */
+  width: calc(100% + 40px);
+  height: calc(100% + 80px);
   background-image: url('assets/img/Jae_slots_frame.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -36,7 +50,6 @@ body {
   z-index: -1;
   pointer-events: none;
 }
-
 
 /* Reels */
 .reels {
@@ -317,6 +330,8 @@ body {
   50% { top: 100%; }
   100% { top: 100%; }
 }
+
+/* 📱 MOBILE Responsive */
 @media (max-width: 600px) {
   .reels {
     gap: 10px;
@@ -328,7 +343,7 @@ body {
   }
 
   .symbol {
-    height: 22vw; /* More height for full symbols */
+    height: 22vw;
   }
 
   .controls {
@@ -350,7 +365,7 @@ body {
     width: 100%;
   }
 
-  .bet-button {
+  .bet-controls button {
     font-size: 16px;
     padding: 10px 18px;
   }
