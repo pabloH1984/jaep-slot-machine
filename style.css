@@ -330,3 +330,47 @@ body {
   50% { top: 100%; }
   100% { top: 100%; }
 }
+/* Responsive Wrapper */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+  box-sizing: border-box;
+}
+
+/* Ensure slot-machine scales correctly */
+.slot-machine {
+  width: 100%;
+  max-width: 480px;
+  background-color: #022953;
+  border: 5px solid #00bfff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #00bfff, 0 0 60px #00ffff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Responsive tweaks for mobile */
+@media (max-width: 600px) {
+  .reel {
+    width: 30vw;
+    height: 40vh;
+  }
+
+  .symbol {
+    height: 13vh;
+  }
+
+  #spin-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 20px;
+  }
+
+  .info-display.top-position {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
