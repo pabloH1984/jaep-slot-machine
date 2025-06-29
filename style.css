@@ -374,3 +374,47 @@ body {
     gap: 10px;
   }
 }
+/* RESPONSIVE WRAPPER */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 2vw;
+  box-sizing: border-box;
+}
+
+/* Make the game container scale cleanly */
+.slot-machine {
+  width: 100%;
+  max-width: 480px;
+  background-color: #022953;
+  border: 5px solid #00bfff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #00bfff, 0 0 60px #00ffff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Make reels and layout responsive */
+@media (max-width: 600px) {
+  .reel {
+    width: 30vw;
+    height: 40vh;
+  }
+
+  .symbol {
+    height: 13vh;
+  }
+
+  #spin-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 20px;
+  }
+
+  .info-display.top-position {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
