@@ -2,74 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jae‑P Slot Machine</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JAE-P Slot Machine</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="slot-machine"> <!-- ✅ Match CSS class -->
+  <div class="slot-machine">
+    <!-- Background Image (Red Template) -->
+    <img src="JAE-P SLOTS FRAMES.jpg" alt="Slot Background" class="background-image" />
 
-    <!-- 🎯 Game content overlay -->
+    <!-- Overlay for UI elements -->
     <div class="slot-overlay">
-      
-      <!-- Credits -->
-      <div class="info-box">
-        <div class="label">Credits:</div>
-        <div class="value" id="credits">$100</div>
-      </div>
-
-      <!-- Winnings & Bet -->
+      <!-- TOP INFO: Credits / Bet / Winnings -->
       <div class="info-display top-position">
         <div class="info-box">
-          <div class="label">Winnings:</div>
-          <div class="value" id="winnings">$0</div>
+          <div class="label">Credits</div>
+          <div class="value" id="credits">100</div>
         </div>
         <div class="info-box">
-          <div class="label">Bet:</div>
-          <div class="value" id="bet">$1</div>
+          <div class="label">Bet</div>
+          <div class="value" id="bet">10</div>
+        </div>
+        <div class="info-box">
+          <div class="label">Winnings</div>
+          <div class="value" id="winnings">0</div>
         </div>
       </div>
 
-      <!-- Reels -->
+      <!-- MIDDLE REELS -->
       <div class="reels">
-        <div class="reel" id="reel1">
-          <div class="symbol" id="r1s1"></div>
-          <div class="symbol" id="r1s2"></div>
-          <div class="symbol" id="r1s3"></div>
-        </div>
-        <div class="reel" id="reel2">
-          <div class="symbol" id="r2s1"></div>
-          <div class="symbol" id="r2s2"></div>
-          <div class="symbol" id="r2s3"></div>
-        </div>
-        <div class="reel" id="reel3">
-          <div class="symbol" id="r3s1"></div>
-          <div class="symbol" id="r3s2"></div>
-          <div class="symbol" id="r3s3"></div>
-        </div>
+        <div class="reel" id="reel1"></div>
+        <div class="reel" id="reel2"></div>
+        <div class="reel" id="reel3"></div>
       </div>
 
-      <!-- Controls -->
+      <!-- BOTTOM CONTROLS -->
       <div class="controls">
         <div class="bet-controls">
-          <button class="bet-button" onclick="decreaseBet()">BET−</button>
+          <button onclick="decreaseBet()">- Bet</button>
+          <button onclick="increaseBet()">+ Bet</button>
         </div>
         <button id="spin-btn" onclick="spin()">SPIN</button>
-        <div class="bet-controls">
-          <button class="bet-button" onclick="increaseBet()">BET+</button>
-        </div>
       </div>
-
-      <!-- Effects -->
-      <div id="win-effect-container"></div>
-
-      <!-- Background music -->
-      <audio id="bg-music" loop autoplay>
-        <source src="assets/music/sample.mp3" type="audio/mpeg" />
-      </audio>
-
-      <!-- Win sound -->
-      <audio id="winSound" src="assets/sfx/mexican-scream.mp3" preload="auto"></audio>
     </div>
   </div>
 
