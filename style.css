@@ -22,18 +22,16 @@ body {
 
 .slot-machine {
   width: 100vw;
-  max-width: 100%;
-  margin: 60px auto 0 auto;
-  background-color: #022953;
-  border: 5px solid #00bfff;
-  border-radius: 10px;
-  box-shadow: 0 0 30px #00bfff, 0 0 60px #00ffff;
-  padding: 40px 20px 30px 20px;
+  height: 100vh; /* 🔥 full screen for full layout control */
+  background-color: transparent; /* No background, just your image */
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
   position: relative;
-  z-index: 1;
   overflow: hidden;
-  box-sizing: border-box;
 }
+
 
 /* Background frame image */
 .slot-machine::before {
