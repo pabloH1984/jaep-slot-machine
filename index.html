@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JAE-P Slot Machine</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
 <body>
   <div class="slot-machine">
-    <!-- Background Image (Red Template) -->
-    <img src="JAE-P SLOTS FRAMES.jpg" alt="Slot Background" class="background-image" />
-
-    <!-- Overlay for UI elements -->
+    <img class="background-img" src="JAE-P SLOTS FRAMES.jpg" alt="Slot Background" />
+    
     <div class="slot-overlay">
-      <!-- TOP INFO: Credits / Bet / Winnings -->
+      <!-- INFO DISPLAY -->
       <div class="info-display top-position">
         <div class="info-box">
           <div class="label">Credits</div>
@@ -29,14 +19,14 @@
         </div>
       </div>
 
-      <!-- MIDDLE REELS -->
+      <!-- REELS -->
       <div class="reels">
         <div class="reel" id="reel1"></div>
         <div class="reel" id="reel2"></div>
         <div class="reel" id="reel3"></div>
       </div>
 
-      <!-- BOTTOM CONTROLS -->
+      <!-- CONTROLS -->
       <div class="controls">
         <div class="bet-controls">
           <button onclick="decreaseBet()">- Bet</button>
@@ -46,7 +36,4 @@
       </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
-</html>
