@@ -1,33 +1,26 @@
-let credits = 100;
-let bet = 10;
+const symbols = [
+  'assets/symbol1.png',
+  'assets/symbol2.png',
+  'assets/symbol3.png',
+  'assets/symbol4.png',
+  'assets/symbol5.png'
+];
 
-function updateDisplay() {
-  document.getElementById("credits").innerText = credits;
-  document.getElementById("bet").innerText = bet;
-}
+const reels = [
+  document.getElementById('reel1'),
+  document.getElementById('reel2'),
+  document.getElementById('reel3')
+];
 
-function decreaseBet() {
-  if (bet > 1) {
-    bet -= 1;
-    updateDisplay();
+function spinReel(reel) {
+  reel.innerHTML = '';
+  for (let i = 0; i < 5; i++) {
+    const img = document.createElement('img');
+    img.src = symbols[Math.floor(Math.random() * symbols.length)];
+    reel.appendChild(img);
   }
 }
 
-function increaseBet() {
-  if (bet < credits) {
-    bet += 1;
-    updateDisplay();
-  }
-}
-
-function spin() {
-  if (credits >= bet) {
-    credits -= bet;
-    const winnings = Math.floor(Math.random() * bet * 2); // random win
-    credits += winnings;
-    document.getElementById("winnings").innerText = winnings;
-    updateDisplay();
-  }
-}
-
-updateDisplay();
+document.getElementById('spinButton').addEventListener('click', () => {
+  reels.forEach(spinReel);
+});
