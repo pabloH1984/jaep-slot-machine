@@ -2,52 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JAE-P Slot Machine</title>
+  <meta name="viewport" content="width=720, user-scalable=no" />
+  <title>Slot Machine</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="slot-machine">
-    <div class="slot-overlay">
-      <!-- INFO DISPLAY -->
-      <div class="info-display top-position">
-        <div class="info-box">
-          <div class="label">Credits</div>
-          <div class="value" id="credits">100</div>
-        </div>
-        <div class="info-box">
-          <div class="label">Bet</div>
-          <div class="value" id="bet">10</div>
-        </div>
-        <div class="info-box">
-          <div class="label">Winnings</div>
-          <div class="value" id="winnings">0</div>
-        </div>
-      </div>
-
-      <!-- REELS -->
-      <div class="reels">
-        <div class="reel" id="reel1"></div>
-        <div class="reel" id="reel2"></div>
-        <div class="reel" id="reel3"></div>
-      </div>
-
-      <!-- CONTROLS -->
-      <div class="controls">
-        <div class="bet-controls">
-          <button onclick="decreaseBet()">- Bet</button>
-          <button onclick="increaseBet()">+ Bet</button>
-        </div>
-        <button id="spin-btn" onclick="spin()">SPIN</button>
-      </div>
+  <div class="slot-container">
+    <img src="assets/background.jpg" class="background" />
+    <div class="reel-container">
+      <div class="reel" id="reel1"></div>
+      <div class="reel" id="reel2"></div>
+      <div class="reel" id="reel3"></div>
     </div>
+    <button id="spinButton">SPIN</button>
   </div>
-
-  <!-- WIN IMAGE CELEBRATION -->
-  <div class="win-celebration" id="win-celebration" style="display: none;">
-    <img src="IMG_4031.JPG" alt="Win Celebration" />
-  </div>
-
   <script src="script.js"></script>
 </body>
 </html>
