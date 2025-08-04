@@ -1,39 +1,62 @@
-<body>
-  <div class="slot-machine">
-    <img class="background-img" src="JAE-P SLOTS FRAMES.jpg" alt="Slot Background" />
-    
-    <div class="slot-overlay">
-      <!-- INFO DISPLAY -->
-      <div class="info-display top-position">
-        <div class="info-box">
-          <div class="label">Credits</div>
-          <div class="value" id="credits">100</div>
-        </div>
-        <div class="info-box">
-          <div class="label">Bet</div>
-          <div class="value" id="bet">10</div>
-        </div>
-        <div class="info-box">
-          <div class="label">Winnings</div>
-          <div class="value" id="winnings">0</div>
-        </div>
-      </div>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
-      <!-- REELS -->
-      <div class="reels">
-        <div class="reel" id="reel1"></div>
-        <div class="reel" id="reel2"></div>
-        <div class="reel" id="reel3"></div>
-      </div>
+.slot-container {
+  position: relative;
+  width: 720px;
+  height: 1280px;
+  overflow: hidden;
+}
 
-      <!-- CONTROLS -->
-      <div class="controls">
-        <div class="bet-controls">
-          <button onclick="decreaseBet()">- Bet</button>
-          <button onclick="increaseBet()">+ Bet</button>
-        </div>
-        <button id="spin-btn" onclick="spin()">SPIN</button>
-      </div>
-    </div>
-  </div>
-</body>
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.reel-container {
+  position: absolute;
+  top: 30%;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+
+.reel {
+  width: 140px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.reel img {
+  width: 100%;
+  height: 100px;
+  object-fit: contain;
+}
+
+#spinButton {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px 40px;
+  font-size: 24px;
+  background: gold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
